@@ -23,6 +23,18 @@ class PlayingCard(object):
         '''
         self.value = value
         self.suit = suit
+        
+    def get_suit(self):
+        '''
+        Method to return the suit of the card
+        '''
+        return self.suit
+    
+    def get_value(self):
+        '''
+        Method to return the value of the card
+        '''
+        return self.value
 
 import random        
 
@@ -50,4 +62,4 @@ random.shuffle(deck)
 # Take the top card off the top of the deck
 top_card = deck.pop()
 # See what it is
-print(top_card.value, top_card.suit)
+print(top_card.get_value(), top_card.get_suit())
