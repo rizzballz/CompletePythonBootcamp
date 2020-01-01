@@ -18,36 +18,39 @@ class Stack(object):
 
     Attributes:
     -----------
+    stack = The list of items
     '''
     def __init__(self):
         '''
-        docstring
+        On instantiation, initialise an empty list (stack).
         '''
-        pass
+        self.stack = []
 
-    def __str__(self):
-        '''
-        docstring
-        '''
-        return 'This is a stack.'
+    # def __rpr__(self):
+    #     '''
+    #     docstring
+    #     '''
+    #     return self.stack
 
     def push(self, item):
         '''
-        docstring
+        Push an item to the top of the stack.
         '''
-        pass
+        self.stack.append(item)
 
     def pull(self, item):
         '''
-        docstring
+        Pull the top item from the stack. Item is removed.
         '''
-        pass
+        return self.stack.pop()
 
     def peek(self):
         '''
-        docstring
+        Look at the top item on the stack but do not remove it.
         '''
-        pass
+        return self.stack[-1]
 
 stack = Stack()
-print(stack)
+stack.push(1)
+stack.push(3)
+print(stack.peek())
