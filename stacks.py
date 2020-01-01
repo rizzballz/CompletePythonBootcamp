@@ -7,7 +7,7 @@ Created on Wed Jan 01 20:59:03 2020
 @title: Stacks
 @description: Create a program that checks for balanced parenthesis, 
     brackets and braces (), [], {}. Use stacks to do this.
-    Create a stack class to instantiate Stack objects
+    Create a stack class to handle the stack object
 """
 
 class Stack(object):
@@ -24,6 +24,12 @@ class Stack(object):
         docstring
         '''
         pass
+
+    def __str__(self):
+        '''
+        docstring
+        '''
+        return 'This is a stack.'
 
     def push(self, item):
         '''
@@ -42,3 +48,6 @@ class Stack(object):
         docstring
         '''
         pass
+
+stack = Stack()
+print(stack)
