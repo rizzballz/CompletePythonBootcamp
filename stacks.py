@@ -26,11 +26,29 @@ class Stack(object):
         '''
         self.stack = []
 
-    # def __rpr__(self):
-    #     '''
-    #     docstring
-    #     '''
-    #     return self.stack
+    def add_to_stack(self, item_string):
+        '''
+        take a string of characters and push each individual item from the string to the stack.
+        '''
+        for item in item_string:
+            self.push(item)
+
+    def is_empty(self):
+        '''
+        Check to see is the stack is empty return True if empty
+        return False if items in stack.
+        '''
+        if not self.stack:
+            return True
+        else:
+            return False
+
+    def __repr__(self):
+        '''
+        Returns a representation of itself in the form of a list rather than
+        <__main__.Stack object at 0x7efe521920d0>.
+        '''
+        return  repr(self.stack)
 
     def push(self, item):
         '''
@@ -48,9 +66,12 @@ class Stack(object):
         '''
         Look at the top item on the stack but do not remove it.
         '''
-        return self.stack[-1]
+        if self.stack == []:
+            return None
+        else:
+            return self.stack[-1]
+
 
 stack = Stack()
-stack.push(1)
-stack.push(3)
-print(stack.peek())
+print(stack)
+print(len(stack.stack))
