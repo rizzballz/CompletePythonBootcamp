@@ -56,7 +56,7 @@ class Stack(object):
         '''
         self.stack.append(item)
 
-    def pull(self, item):
+    def pull(self):
         '''
         Pull the top item from the stack. Item is removed.
         '''
